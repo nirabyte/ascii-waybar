@@ -10,9 +10,9 @@ Minimalist Waybar configuration with ASCII art system monitoring.
 - Workspace app icon integration with YAMIS (Yet Another Monochrome Icon Set) icons
 - Custom analog clock display (shoutout to [fshaxe](https://github.com/fshaxe) for the analog clock glyph)
 
-The analog clock uses glyphs from SimpleAnalogClockFont. The font displays a different clock face for each minute of the day (720 unique glyphs).
-
-![Analog Clock Glyph](assets/clock.gif)
+> The analog clock uses glyphs from SimpleAnalogClockFont. The font displays a different clock face for each minute of > the day (720 unique glyphs).
+>
+> ![Analog Clock Glyph](assets/clock.gif)
 
 
 
