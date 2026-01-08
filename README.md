@@ -80,7 +80,8 @@ Minimalist Waybar configuration with ASCII art system monitoring.
    - For Omarchy users: `Super + Shift + Space`
    - Or run: `pkill waybar && nohup waybar &`
 
-> Preview
+> ### Preview
+>
 > ![Waybar Preview](assets/waybar.png)
 ## Icon Theme
 
