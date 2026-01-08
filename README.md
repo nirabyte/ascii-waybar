@@ -57,9 +57,6 @@ Minimalist Waybar configuration with ASCII art system monitoring.
 4. Install [SimpleAnalogClockFont](https://github.com/fshaxe/SimpleAnalogClockFont) (for analog clock glyph display):
 
    ```bash
-   # Create fonts directory and download fonts
-   mkdir -p ~/.local/share/fonts
-   
    # Regular font
    curl -L https://github.com/fshaxe/SimpleAnalogClockFont/raw/main/SimpleAnalogClockFont.ttf -o ~/.local/share/fonts/SimpleAnalogClockFont.ttf
    
@@ -70,7 +67,7 @@ Minimalist Waybar configuration with ASCII art system monitoring.
    fc-cache -f -v
    ```
 
-   Make sure the font name is specified in the custom clock module in `style.css`:
+   > Make sure the font name is specified in the custom clock module in `style.css`:
 
    ```css
    #custom-analog-clock {
@@ -86,11 +83,11 @@ Minimalist Waybar configuration with ASCII art system monitoring.
 
 ---
 
-### Icon Theme
+## Icon Theme
 
 The configuration uses YAMIS (Yet Another Monochrome Icon Set) for workspace icons. See installation step 3 above for setup instructions.
 
-### Analog Clock
+## Analog Clock
 
 The analog clock uses glyphs from SimpleAnalogClockFont. The font displays a different clock face for each minute of the day (720 unique glyphs).
 
@@ -104,5 +101,5 @@ The analog clock uses glyphs from SimpleAnalogClockFont. The font displays a dif
 
 ---
 
-> [!NOTE] **For Omarchy users**
-> This configuration uses `omarchy-menu-tofi` in the config (tofi variant instead of walker). If you're using omarchy, ensure you have removed the `-walker` suffix commands.
+> [!NOTE] 
+> **For Omarchy users**: This configuration uses `omarchy-menu-tofi` in the config (tofi variant instead of walker). If you're using omarchy, ensure you have removed the `-walker` suffix commands.
