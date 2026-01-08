@@ -10,7 +10,6 @@ Minimalist Waybar configuration with ASCII art system monitoring.
 - Custom analog clock display (shoutout to [fshaxe](https://github.com/fshaxe) for the analog clock glyph)
 - Workspace app icon integration with YAMIS (Yet Another Monochrome Icon Set) icons
 
----
 
 ## Configuration
 
@@ -81,8 +80,8 @@ Minimalist Waybar configuration with ASCII art system monitoring.
    - For Omarchy users: `Super + Shift + Space`
    - Or run: `pkill waybar && nohup waybar &`
 
----
-
+> Preview
+> ![Waybar Preview](assets/waybar.png)
 ## Icon Theme
 
 The configuration uses YAMIS (Yet Another Monochrome Icon Set) for workspace icons. See installation step 3 above for setup instructions.
@@ -93,13 +92,9 @@ The analog clock uses glyphs from SimpleAnalogClockFont. The font displays a dif
 
 ![Analog Clock Glyph](assets/clock.gif)
 
----
-
 ## Preview
 
 ![Waybar Preview](assets/waybar.png)
-
----
 
 > [!NOTE] 
 > **For Omarchy users**: This configuration uses `omarchy-menu-tofi` in the config (tofi variant instead of walker). If you're using omarchy, ensure you have removed the `-walker` suffix commands.
