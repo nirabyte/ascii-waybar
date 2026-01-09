@@ -1,6 +1,6 @@
 # Waybar with ASCII Art Modules
 
-Ghostpane Theme
+### Ghostpane Theme
 
 ![Waybar Preview](assets/preview.png)
 
