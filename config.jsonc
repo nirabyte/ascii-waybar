@@ -16,11 +16,11 @@
     "group/tray-expander",
     "network",
     "pulseaudio",
+    "power-profiles-daemon",
     "cpu",
     "memory",
     "battery",
     // "temperature",
-    // "power-profiles-daemon",
     "custom/analog-clock",
     "clock",
   ],
@@ -71,7 +71,7 @@
   },
 
   "cpu": {
-    "format": " CPU {icon} {usage}% ",
+    "format": "CPU {icon} {usage}% ",
     "interval": 2,
     "on-click": "omarchy-launch-or-focus-tui btop",
     "format-icons": [
@@ -108,16 +108,16 @@
     ],
   },
 
-  // "power-profiles-daemon": {
-  //   "format": "{icon}",
-  //   "tooltip-format": "{profile}",
-  //   "tooltip": true,
-  //   "format-icons": {
-  //     "performance": "󰓅",
-  //     "balanced": "󰾅",
-  //     "power-saver": "󰾆",
-  //   },
-  // },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "{profile}",
+    "tooltip": true,
+    "format-icons": {
+      "performance": "󰓅",
+      "balanced": "󰾅",
+      "power-saver": "󰾆",
+    },
+  },
   // "temperature": {
   //   "hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
   //   "input-filename": "temp1_input",
