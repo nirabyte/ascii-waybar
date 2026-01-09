@@ -44,17 +44,17 @@ Minimalist Waybar configuration with ASCII art system monitoring.
    sudo cp -r YAMIS /usr/share/icons/
    ```
 
-  > To change the icon theme, edit `config.jsonc`:
+    > To change the icon theme, edit `config.jsonc`:
 
-   ```jsonc
-   "hyprland/workspaces": {
-    "workspace-taskbar": {
-      "icon-theme": "YAMIS",  // Change to your preferred icon theme name
+    ```jsonc
+    "hyprland/workspaces": {
+      "workspace-taskbar": {
+        "icon-theme": "YAMIS",  // Change to your preferred icon theme name
+        // ...
+      },
       // ...
-    },
-    // ...
-  }
-   ```
+    }
+    ```
 
 > You can install your preferred icon theme and update the name accordingly.
 
