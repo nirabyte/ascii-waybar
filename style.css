@@ -217,12 +217,12 @@
 #custom-screenrecording-indicator.active {
     color: #cdd6f4;
     animation-name: blink-recording;
-    animation-duration: 0.5s;
+    animation-duration: 0.7s;
 }
 
 @keyframes blink-recording {
     to {
-        color: @background;
+        color: rgba(24, 24, 36, 0);
     }
 }
 
