@@ -44,19 +44,19 @@
    sudo cp -r YAMIS /usr/share/icons/
    ```
 
-    > To change the icon theme, edit `config.jsonc`:
+   > To change the icon theme, edit `config.jsonc`:
 
-    ```jsonc
-    "hyprland/workspaces": {
-      "workspace-taskbar": {
-        "icon-theme": "YAMIS",  // Change to your preferred icon theme name
-        // ...
-      },
-      // ...
-    }
-    ```
+   ```jsonc
+   "hyprland/workspaces": {
+     "workspace-taskbar": {
+       "icon-theme": "YAMIS",  // Change to your preferred icon theme name
+       // ...
+     },
+     // ...
+   }
+   ```
 
-    > You can install your preferred icon theme and update the name accordingly.
+   > You can install your preferred icon theme and update the name accordingly.
 
 4. Install [SimpleAnalogClockFont](https://github.com/fshaxe/SimpleAnalogClockFont) (for analog clock glyph display):
 
@@ -91,7 +91,6 @@
    omarchy-restart-waybar
    ```
 
-   > Or toggle the waybar with `Super + Shift + Space`
    - Or run:
 
    ```bash
@@ -115,7 +114,6 @@ All system monitoring modules use block character format-icons for a retro ASCII
 ## Preview
 
 ![Waybar Preview](assets/waybar.png)
-
 
 > [!NOTE]
 > **For Omarchy users**: This configuration uses `omarchy-menu-tofi` in the config (tofi variant instead of walker). If you're using omarchy, ensure you have removed the `-todi` suffix commands.
