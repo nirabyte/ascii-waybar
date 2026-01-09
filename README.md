@@ -118,4 +118,4 @@ All system monitoring modules use block character format-icons for a retro ASCII
 
 
 > [!NOTE]
-> **For Omarchy users**: This configuration uses `omarchy-menu-tofi` in the config (tofi variant instead of walker). If you're using omarchy, ensure you have removed the `-walker` suffix commands.
+> **For Omarchy users**: This configuration uses `omarchy-menu-tofi` in the config (tofi variant instead of walker). If you're using omarchy, ensure you have removed the `-todi` suffix commands.
