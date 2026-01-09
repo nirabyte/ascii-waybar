@@ -1,4 +1,4 @@
-/* ████████ CATPPUCCIN MOCHA WAYBAR THEME ████████ */
+/* ████████ ASCII WAYBAR THEME ████████ */
 /* ════════════════════════════════════════════════ */
 
 * {
@@ -6,17 +6,14 @@
     color: #cdd6f4;
     border: none;
     border-radius: 0;
-    font-family: "Monaco", "Menlo", "DejaVu Sans Mono", monospace;
+    font-family: "CaskaydiaMono Nerd Font";
     font-size: 12px;
     font-weight: normal;
-    margin: 0;
-    padding: 0;
 }
 
 #waybar {
     background: transparent;
     color: #cdd6f4;
-    padding: 0 4px;
 }
 
 /* ▓▓▓▓▓▓▓ LEFT MODULES ▓▓▓▓▓▓▓ */
@@ -35,10 +32,11 @@
     all: initial;
     background: transparent;
     color: #cdd6f4;
-    border: 1px solid transparent;
+    border: 1.5px solid transparent;
     padding: 0px 6px;
     margin: 0 2px;
-    font-size: 11px;
+    font-size: 10px;
+
     /*border-radius: 3px;*/
     transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -49,9 +47,9 @@
 }
 
 #workspaces button.active {
-    border: 2px solid #cdd6f4;
-    /*background: linear-gradient(135deg, #1e1e2e, #313244);*/
-
+    border: 1.5px solid #cdd6f4;
+    padding: 0 12px;
+    min-width: 10px;
     color: #cdd6f4;
 }
 
@@ -91,28 +89,64 @@
     background: transparent;
     padding: 0 2px 0 8px;
 }
-
-/* ▓▓▓▓▓▓▓ CUSTOM ASCII MODULES ▓▓▓▓▓▓▓ */
-#custom-cpu-ascii {
-    /*background: #1e1e2e;*/
+#bluetooth {
     background: transparent;
     color: #cdd6f4;
     border: 1px solid #cdd6f4;
-    padding: 1px 8px;
+    padding: 1px 6px;
     margin: 2px 1px;
-    font-size: 9px;
+    font-size: 10px;
 }
-
-#custom-memory-ascii {
-    /*background: #1e1e2e;*/
+#pulseaudio {
     background: transparent;
     color: #cdd6f4;
     border: 1px solid #cdd6f4;
-    padding: 1px 8px;
+    padding: 1px 6px;
     margin: 2px 1px;
-    font-size: 9px;
+    font-size: 10px;
 }
 
+#memory {
+    background: transparent;
+    color: #cdd6f4;
+    border: 1px solid #cdd6f4;
+    padding: 1px 6px;
+    margin: 2px 1px;
+    font-size: 10px;
+}
+#cpu {
+    background: transparent;
+    color: #cdd6f4;
+    border: 1px solid #cdd6f4;
+    padding: 1px 6px;
+    margin: 2px 1px;
+    font-size: 10px;
+}
+#temperature {
+    background: transparent;
+    color: #cdd6f4;
+    border: 1px solid #cdd6f4;
+    padding: 1px 6px;
+    margin: 2px 1px;
+    font-size: 10px;
+}
+
+#battery {
+    background: transparent;
+    color: #cdd6f4;
+    border: 1px solid #cdd6f4;
+    padding: 1px 6px;
+    margin: 2px -0px;
+    font-size: 10px;
+}
+/*#power-profiles-daemon {
+    background: transparent;
+    color: #cdd6f4;
+    border: 1px solid #cdd6f4;
+    padding: 1px 6px;
+    margin: 2px 1px;
+    font-size: 10px;
+}*/
 #network {
     /*background: #1e1e2e;*/
     background: transparent;
@@ -120,34 +154,7 @@
     border: 1px solid #cdd6f4;
     padding: 1px 6px;
     margin: 2px 1px;
-    font-size: 9px;
-}
-
-#custom-volume-ascii {
-    /*background: #1e1e2e;*/
-    background: transparent;
-    color: #cdd6f4;
-    border: 1px solid #cdd6f4;
-    padding: 1px 8px;
-    margin: 2px 1px;
-    font-size: 9px;
-}
-
-#custom-battery-ascii {
-    /*background: #1e1e2e;*/
-    background: transparent;
-    color: #cdd6f4;
-    border: 1px solid #cdd6f4;
-    padding: 1px 8px;
-    margin: 2px 1px;
-    font-size: 9px;
-}
-
-#custom-analog-clock {
-    font-family: "SimpleAnalogClockFont";
-    font-size: 16px;
-    padding: 0 2px;
-    color: #cdd6f4;
+    font-size: 10px;
 }
 
 /* ▓▓▓▓▓▓▓ TOOLTIPS ▓▓▓▓▓▓▓ */
@@ -162,6 +169,18 @@
     padding: 4px 8px;
 }*/
 
+/*▓▓▓▓▓▓▓ Extras ▓▓▓▓▓▓▓*/
+#clock {
+    /*background: #1e1e2e;*/
+    background: transparent;
+    border: 1px solid #cdd6f4;
+    border-left: none;
+    font-family: "Monaco", "Menlo", "DejaVu Sans Mono", monospace;
+    font-size: 11.5px;
+    padding: 1px 6px;
+    margin: 2px 0px 2px 0;
+    color: #cdd6f4;
+}
 #custom-analog-clock {
     /*background: #1e1e2e;*/
     background: transparent;
@@ -174,18 +193,7 @@
     margin: 2px -2px 2px 4px;
     color: #cdd6f4;
 }
-/*▓▓▓▓▓▓▓ Extras ▓▓▓▓▓▓▓*/
-#clock {
-    /*background: #1e1e2e;*/
-    background: transparent;
-    border: 1px solid #cdd6f4;
-    border-left: none;
-    font-family: "Monaco", "Menlo", "DejaVu Sans Mono", monospace;
-    font-size: 11px;
-    padding: 1px 6px;
-    margin: 2px 0px 2px 0;
-    color: #cdd6f4;
-}
+
 #tray {
     margin-right: 16px;
 }
