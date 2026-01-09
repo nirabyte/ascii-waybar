@@ -1,6 +1,6 @@
 # Waybar with ASCII Art Modules
 
-Minimalist Waybar configuration with ASCII art system monitoring.
+Ghostpane Theme
 
 ![Waybar Preview](assets/preview.png)
 
