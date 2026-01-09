@@ -56,7 +56,7 @@ Minimalist Waybar configuration with ASCII art system monitoring.
     }
     ```
 
-> You can install your preferred icon theme and update the name accordingly.
+    > You can install your preferred icon theme and update the name accordingly.
 
 4. Install [SimpleAnalogClockFont](https://github.com/fshaxe/SimpleAnalogClockFont) (for analog clock glyph display):
 
