@@ -26,7 +26,7 @@
     padding: 0 6px;
     margin: 0 1.5px;
     min-width: 9px;
-    border:1px solid transparent;
+    border: 1px solid transparent;
     border-radius: 3px;
     transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -42,7 +42,6 @@
     min-width: 10px;
     color: #bfbfbf;
     background: transparent;
-
 }
 
 #workspaces button.occupied:not(.active) {
@@ -51,8 +50,6 @@
     background: #1e1e2e;
     color: #a6adc8;
     border: 1px solid rgba(0, 0, 0, 0.3);
-
-    
 }
 
 #workspaces button.empty {
@@ -171,7 +168,7 @@ tooltip {
     border: 1px solid #bfbfbf;
     border-left: none;
     font-family: "CaskaydiaMono Nerd Font";
-    font-size: 11px;
+    font-size: 11.5px;
     padding: 1px 6px;
     margin: 2px 0px 2px 0;
     color: #bfbfbf;
@@ -184,7 +181,7 @@ tooltip {
     font-family: "SimpleAnalogClockFont";
     font-size: 14px;
     font-weight: bolder;
-    padding: 2px 4px 1px 4px;
+    padding: 1px 3px 1px 4px;
     margin: 2px -1px 2px 3px;
     color: #bfbfbf;
 }
