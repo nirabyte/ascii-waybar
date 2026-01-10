@@ -84,12 +84,12 @@
    ```
 
 5. Restart your waybar:
-   - For Omarchy users run:
+   For Omarchy users run:
 
    ```bash
    omarchy-restart-waybar
    ```
-   - Or run:
+   Or run:
    ```bash
      pkill waybar && nohup waybar &`
    ```
