@@ -8,7 +8,7 @@
 
 - ASCII art system monitoring (CPU, Memory, Battery, Volume)
 - Workspace app icon integration with YAMIS (Yet Another Monochrome Icon Set) icons
-- Custom analog clock display (shoutout to [fshaxe](https://github.com/fshaxe) for the analog clock glyph)
+- Custom analog clock display (shoutout to [fshaxe](https://github.com/fshaxe) for the clock glyph)
 
 > The analog clock uses glyphs from SimpleAnalogClockFont. The font displays a different clock face for each minute of the day (720 unique glyphs).
 >
