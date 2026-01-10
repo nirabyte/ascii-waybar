@@ -1,12 +1,12 @@
-# Waybar with ASCII Art Modules
+# Retro ASCII Art Waybar 
 
-### Theme: Ghostpane
+### Preview
 
 ![Waybar Preview](assets/preview.png)
 
 ## Overview
 
-- ASCII art system monitoring (CPU, Memory, Battery, Volume)
+- ASCII art modules for CPU, Memory, Battery, Volume, etc
 - Workspace app icon integration with YAMIS (Yet Another Monochrome Icon Set) icons
 - Custom analog clock display (shoutout to [fshaxe](https://github.com/fshaxe) for the clock glyph)
 
@@ -31,7 +31,7 @@
    chmod +x ~/.config/waybar/scripts/*.sh
    ```
 
-3. Install YAMIS icon theme (for workspace icons):
+3. Install YAMIS icon theme (for monochrome workspace icons):
 
    Download the theme from [KDE Store YAMIS](https://store.kde.org/p/2303161)
 
@@ -107,10 +107,6 @@ All system monitoring modules use block character format-icons for a retro ASCII
   "██████████",  // 90-100%
 ]
 ```
-
-## Preview
-
-![Waybar Preview](assets/waybar.png)
 
 > [!NOTE]
 > **For Omarchy users**: This configuration uses `omarchy-menu-tofi` in the config (tofi variant instead of walker). If you're using omarchy, ensure you have removed the `-tofi` suffix commands.
