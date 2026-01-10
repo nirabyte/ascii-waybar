@@ -2,7 +2,7 @@
 
 ### Preview
 
-![Waybar Preview](assets/preview.png)
+![Waybar Preview](assets/preview2.png)
 
 ## Overview
 
