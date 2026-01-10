@@ -1,6 +1,6 @@
 # Waybar with ASCII Art Modules
 
-### Theme: Ghostpane
+### Preview
 
 ![Waybar Preview](assets/preview.png)
 
@@ -84,14 +84,13 @@
    ```
 
 5. Restart your waybar:
-   - For Omarchy users:
-   - Run:
+- For Omarchy users:
+- Run:
 
    ```bash
    omarchy-restart-waybar
    ```
-
-   - Or run:
+- Or run:
 
    ```bash
      pkill waybar && nohup waybar &`
