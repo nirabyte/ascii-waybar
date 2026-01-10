@@ -85,7 +85,7 @@
 
 5. Restart your waybar:
    - For Omarchy users:
-     Run:
+   - Run:
 
    ```bash
    omarchy-restart-waybar
