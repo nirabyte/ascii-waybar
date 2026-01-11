@@ -3,21 +3,21 @@
   "layer": "top",
   "position": "top",
   "spacing": 0,
-  "height": 30,
+  "height": 26,
 
   "modules-left": ["custom/omarchy", "hyprland/workspaces"],
 
-  "modules-center": [],
+  "modules-center": ["hyprland/window"],
 
   "modules-right": [
     "custom/update",
-    "custom/voxtype",
+    // "custom/voxtype",
     "custom/screenrecording-indicator",
     "group/tray-expander",
     "network",
-    "pulseaudio",
-    "power-profiles-daemon",
-    "cpu",
+    // "pulseaudio",
+    // "power-profiles-daemon",
+    // "cpu",
     "memory",
     "battery",
     // "temperature",
@@ -29,22 +29,24 @@
     "disable-scroll": false,
     "all-outputs": true,
     "on-click": "activate",
-    "format": "{icon} {windows}",
+    // Uncomment this to have window app icon
+    //    "format": "{icon} {windows}",
+    "format": "{icon}",
     "format-icons": {
-      // dark:    ▒▒
+      // dark:    ▓▓
       // light:   ▒▒
       // lighter: ░░
       "default": "▓▓",
-      "1": "░░",
-      "2": "░░",
-      "3": "░░",
-      "4": "░░",
-      "5": "░░",
-      "6": "░░",
-      "7": "░░",
-      "8": "░░",
-      "9": "░░",
-      "10": "░░",
+      "1": "▒▒",
+      "2": "▒▒",
+      "3": "▒▒",
+      "4": "▒▒",
+      "5": "▒▒",
+      "6": "▒▒",
+      "7": "▒▒",
+      "8": "▒▒",
+      "9": "▒▒",
+      "10": "▒▒",
       "active": "██",
     },
     "workspace-taskbar": {
@@ -59,16 +61,38 @@
     },
   },
 
-  // "hyprland/window": {
-  //   "format": " {title} ",
-  //   "max-length": 60,
-  //   "rewrite": {
-  //     "": " DESKTOP ",
-  //   },
-  // },
-
+  "hyprland/window": {
+    "format": "{title} - {class}",
+    "tooltip": true,
+    "max-length": 50,
+    "rewrite": {
+      " - ": "",
+      "(.*) - dev\\.zed\\.Zed": "󰨞 $1",
+      "(.*) - Cursor": "󰨞 $1",
+      "(.*) - Google-Chrome": " $1",
+      "(.*nvim)...(.*)": " $2",
+      "(.*code) - (.*)": "󰨞 $1",
+      "^.*btop( .*|$)": "󰧨 BTOP$1",
+      "(.*) - Spotify": " $1",
+      "(.*) - com.mitchellh.ghostty": "  $1",
+      "(.*) - Alacritty": "  $1",
+      "(.*Discord)...(.*)": "  $2",
+      "(.*) - Vesktop": "  $1",
+      "(.*) - org.pulseaudio.pavucontrol": "󱡫 $1",
+      "(.*) - org.gnome.Nautilus": "󱂵 $1",
+      "(.*Steam)...(.*)": "  $1",
+      "(.*imv)...(.*).. (.*)": "  $2",
+      "(.*) - com.obsproject.Studio": " $1",
+      "(.*) - mpv": "  $1",
+      "(.*) - VLC": "󰕼 $1",
+      "(.*) - Steam": " $1",
+      "(.*) - GIMP": " $1",
+      "(.*) - VS Code": "󰨞 $1",
+      "(.*) - OBS Studio": " $1",
+    },
+  },
   "custom/omarchy": {
-    "format": "",
+    "format": "󰀻 ",
     "on-click": "omarchy-menu-tofi",
     "on-click-right": "sh -c 'wlogout'",
     "tooltip-format": "Menu\n\nSuper + Alt + Space",
@@ -102,7 +126,7 @@
   },
 
   "memory": {
-    "format": "MEM {icon} {percentage}% ",
+    "format": "MEM {icon} {percentage}%",
     "interval": 2,
     "on-click": "omarchy-launch-or-focus-tui btop",
     "format-icons": [
@@ -120,16 +144,16 @@
     ],
   },
 
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "{profile}",
-    "tooltip": true,
-    "format-icons": {
-      "performance": "󰓅",
-      "balanced": "󰾅",
-      "power-saver": "󰾆",
-    },
-  },
+  // "power-profiles-daemon": {
+  //   "format": "{icon}",
+  //   "tooltip-format": "{profile}",
+  //   "tooltip": true,
+  //   "format-icons": {
+  //     "performance": "󰓅",
+  //     "balanced": "󰾅",
+  //     "power-saver": "󰾆",
+  //   },
+  // },
   // "temperature": {
   //   "hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
   //   "input-filename": "temp1_input",
@@ -163,33 +187,33 @@
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "omarchy-launch-bluetooth",
   },
-  "pulseaudio": {
-    "format": "VOL {icon} {volume}%",
-    "on-click": "omarchy-launch-or-focus-tui wiremix",
-    "on-click-right": "pamixer -t",
-    "tooltip-format": "Playing at {volume}%",
-    "scroll-step": 5,
-    "format-muted": "  {icon} {volume}%",
-    "headphone": "  {icon} {volume}%",
-    "phone": "  {icon} {volume}%",
-    "phone-muted": "  {icon} {volume}%",
-    "portable": "  {icon} {volume}%",
-    "format-icons": {
-      "default": [
-        "░░░░░░░░░░",
-        "█░░░░░░░░░",
-        "██░░░░░░░░",
-        "███░░░░░░░",
-        "████░░░░░░",
-        "█████░░░░░",
-        "██████░░░░",
-        "███████░░░",
-        "████████░░",
-        "█████████░",
-        "██████████",
-      ],
-    },
-  },
+  // "pulseaudio": {
+  //   "format": "VOL {icon} {volume}%",
+  //   "on-click": "omarchy-launch-or-focus-tui wiremix",
+  //   "on-click-right": "pamixer -t",
+  //   "tooltip-format": "Playing at {volume}%",
+  //   "scroll-step": 5,
+  //   "format-muted": "  {icon} {volume}%",
+  //   "headphone": "  {icon} {volume}%",
+  //   "phone": "  {icon} {volume}%",
+  //   "phone-muted": "  {icon} {volume}%",
+  //   "portable": "  {icon} {volume}%",
+  //   "format-icons": {
+  //     "default": [
+  //       "░░░░░░░░░░",
+  //       "█░░░░░░░░░",
+  //       "██░░░░░░░░",
+  //       "███░░░░░░░",
+  //       "████░░░░░░",
+  //       "█████░░░░░",
+  //       "██████░░░░",
+  //       "███████░░░",
+  //       "████████░░",
+  //       "█████████░",
+  //       "██████████",
+  //     ],
+  //   },
+  // },
 
   "group/tray-expander": {
     "orientation": "inherit",
@@ -255,10 +279,10 @@
     "on-click": "omarchy-launch-wifi",
   },
   "battery": {
-    "format": "BAT {icon} 󱈏 {capacity}%",
+    "format": "BAT {icon}  󱈏 {capacity}%",
     "format-discharging": "BAT {icon} {capacity}%",
-    "format-charging": "BAT {icon}  {capacity}%",
-    "format-plugged": "BAT {icon} 󱈏 {capacity}%",
+    "format-charging": "BAT {icon}   {capacity}%",
+    "format-plugged": "BAT {icon}  󱈏 {capacity}%",
     "format-icons": {
       "charging": [
         "░░░░░░░░░░",
@@ -292,6 +316,7 @@
     "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
     "interval": 2,
     "on-click": "omarchy-menu-tofi power",
+    "on-click-right": "omarchy-menu-tofi profile",
     "states": {
       "warning": 20,
       "critical": 10,
