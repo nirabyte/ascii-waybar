@@ -18,9 +18,10 @@
     
     ```
 
+    </br>
+  
 
-\
-2. (Optional) Download the [Doto](https://fonts.google.com/specimen/Doto) or directly get it from the repo and place in your `~/.local/share/fonts`.
+  2. (Optional) Download the [Doto](https://fonts.google.com/specimen/Doto) or directly get it from the repo and place in your `~/.local/share/fonts`.
   - Or Run:
     ```bash
     
@@ -31,7 +32,8 @@
       fc-cache -fv
     ```\
   
-
+  </br>
+    
 
 3. (Optional) Install YAMIS icon theme (for monochrome workspace icons):
 
@@ -58,8 +60,7 @@
     }
     ```
 
-    > You can install your preferred icon theme and update the name accordingly.<br/></br>
-
+    > You can install your preferred icon theme and update the name accordingly.
 
 4. Restart your waybar:
 
