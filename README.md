@@ -19,6 +19,7 @@
     ```
 
 
+\
 2. (Optional) Download the [Doto](https://fonts.google.com/specimen/Doto) or directly get it from the repo and place in your `~/.local/share/fonts`.
   - Or Run:
     ```bash
@@ -28,7 +29,9 @@
       https://raw.githubusercontent.com/nirabyte/ascii-waybar/main/fonts/Doto.ttf && \
       # Refresh font cache
       fc-cache -fv
-    ```
+    ```\
+  
+
 
 3. (Optional) Install YAMIS icon theme (for monochrome workspace icons):
 
@@ -55,22 +58,22 @@
     }
     ```
 
-    > You can install your preferred icon theme and update the name accordingly.
+    > You can install your preferred icon theme and update the name accordingly.<br/></br>
 
 
 4. Restart your waybar:
 
-    - For Omarchy users run:
-  
+  - For Omarchy users run:
+
       ```bash
       omarchy-restart-waybar
       ```
 
-   -  Or run:
+  - Or run:
 
-      ```bash
-      pkill waybar && waybar &
-      ```
+    ```bash
+    pkill waybar && waybar &
+    ```
 
 ## ASCII Visualization
 
