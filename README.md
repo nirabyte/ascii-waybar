@@ -19,7 +19,7 @@ git clone https://github.com/nirabyte/ascii-waybar.git /tmp/ascii-waybar && cp -
 ```
 
 2. (Optional) Download the [Doto](https://fonts.google.com/specimen/Doto) or directly get it from the repo and place in your `~/.local/share/fonts`.
-> Or Run:
+- Or Run:
 
 ```bash
 
