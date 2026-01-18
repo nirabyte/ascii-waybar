@@ -1,97 +1,72 @@
-# Retro ASCII Art Waybar 
+# Retro ASCII Art Waybar
 
 ### Preview
 
-![Waybar Preview](assets/preview2.png)
+![Waybar Preview](assets/preview.png)
 
 ## Overview
 
-- ASCII art modules for CPU, Memory, Battery, Volume, etc
+- ASCII art modules for CPU, Memory, Battery, Volume,etc
 - Workspace app icon integration with YAMIS (Yet Another Monochrome Icon Set) icons
-- Custom analog clock display (shoutout to [fshaxe](https://github.com/fshaxe) for the clock glyph)
 
-> The analog clock uses glyphs from SimpleAnalogClockFont. The font displays a different clock face for each minute of the day (720 unique glyphs).
->
-> ![Analog Clock Glyph](assets/clock.gif)
+## Quick Start
+1. Run:
+  ```bash
+  git clone https://github.com/nirabyte/ascii-waybar.git /tmp/ascii-waybar && cp -rf /tmp/ascii-waybar/* ~/.config/waybar/ && rm -rf /tmp/ascii-waybar && omarchy-restart-waybar
+  
+  ```
 
-## Installation
 
-1. Copy configuration files to `~/.config/waybar/`:
+2. (Optional) Download the [Doto](https://fonts.google.com/specimen/Doto) or directly get it from the repo and place in your  `~/.local/share/fonts`.
 
-   ```bash
-   cp config.jsonc style.css ~/.config/waybar/
+  ```
+  bash
+  
+  
+  ```
 
-   # Optional for analog clock glpyh
-   cp -r scripts/ ~/.config/waybar/
-   ```
 
-2. Make scripts executable:
+3.(Optional) Install YAMIS icon theme (for monochrome workspace icons):
 
-   ```bash
-   chmod +x ~/.config/waybar/scripts/*.sh
-   ```
+Download the theme from [KDE Store YAMIS](https://store.kde.org/p/2303161)
 
-3. Install YAMIS icon theme (for monochrome workspace icons):
+  ```bash
+  # Extract the tar.gz file
+  tar -xzf yet-another-monochrome-icon-set-*.tar.gz
+  
+  # Go into the extracted folder and copy YAMIS to ~/.local/share/icons
+  cd yet-another-monochrome-icon-set
+  sudo cp -r YAMIS ~/.local/share/icons
+  ```
 
-   Download the theme from [KDE Store YAMIS](https://store.kde.org/p/2303161)
+> To change the icon theme, edit `config.jsonc`:
 
-   ```bash
-   # Extract the tar.gz file
-   tar -xzf yet-another-monochrome-icon-set-*.tar.gz
+  ```jsonc
+  "hyprland/workspaces": {
+    "workspace-taskbar": {
+      "icon-theme": "YAMIS",  // Change to your preferred icon theme name
+      // ...
+    },
+    // ...
+  }
+  ```
 
-   # Go into the extracted folder and copy YAMIS to /usr/share/icons
-   cd yet-another-monochrome-icon-set
-   sudo cp -r YAMIS /usr/share/icons/
-   ```
+> You can install your preferred icon theme and update the name accordingly.
 
-   > To change the icon theme, edit `config.jsonc`:
 
-   ```jsonc
-   "hyprland/workspaces": {
-     "workspace-taskbar": {
-       "icon-theme": "YAMIS",  // Change to your preferred icon theme name
-       // ...
-     },
-     // ...
-   }
-   ```
 
-   > You can install your preferred icon theme and update the name accordingly.
+4. Restart your waybar:\
 
-4. Install [SimpleAnalogClockFont](https://github.com/fshaxe/SimpleAnalogClockFont) (for analog clock glyph display):
-
-   ```bash
-   # Create fonts directory and download fonts
-   mkdir -p ~/.local/share/fonts
-
-   # Regular font
-   curl -L https://github.com/fshaxe/SimpleAnalogClockFont/raw/main/SimpleAnalogClockFont.ttf -o ~/.local/share/fonts/SimpleAnalogClockFont.ttf
-
-   # Bold font
-   curl -L https://github.com/fshaxe/SimpleAnalogClockFont/raw/main/SimpleAnalogClockFont-Bold.ttf -o ~/.local/share/fonts/SimpleAnalogClockFont-Bold.ttf
-
-   # Reload font cache
-   fc-cache -f -v
-   ```
-
-   Make sure the font name is specified in the custom clock module in `style.css`:
-
-   ```css
-   #custom-analog-clock {
-     font-family: "SimpleAnalogClockFont"; /* or SimpleAnalogClockFont-Bold */
-     /* ... */
-   }
-   ```
-
-5. Restart your waybar:
    For Omarchy users run:
 
    ```bash
    omarchy-restart-waybar
    ```
+
    Or run:
+
    ```bash
-     pkill waybar && nohup waybar &`
+   pkill waybar && waybar &
    ```
 
 ### ASCII Visualization
@@ -99,14 +74,27 @@
 All system monitoring modules use block character format-icons for a retro ASCII aesthetic:
 
 ```jsonc
-"format-icons": [
-  "░░░░░░░░░░",  // 0-10%
-  "█░░░░░░░░░",  // 10-20%
-  "██░░░░░░░░",  // 20-30%
-  // ... up to
-  "██████████",  // 90-100%
-]
+// Horizontal progress bar
+ "format-icons":
+  [
+  "░░░░░░░░░░",
+  "█░░░░░░░░░",
+  "██░░░░░░░░",
+  "███░░░░░░░",
+  "████░░░░░░",
+  "█████░░░░░",
+  "██████░░░░",
+  "███████░░░",
+  "████████░░",
+  "█████████░",
+  "██████████",
+
+  ]
+ // Vertical progress bar
+  "format-icons": [
+  "░", "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"
+  ]
 ```
 
 > [!NOTE]
-> **For Omarchy users**: This configuration uses `omarchy-menu-tofi` in the config (tofi variant instead of walker). If you're using omarchy, ensure you have removed the `-tofi` suffix commands.
+> **For Omarchy users**: This configuration uses `omarchy-menu-tofi` in the config (uses tofi instead of walker that comes with omarchy). If you're using omarchy, ensure you have removed the `-tofi` suffix commands.
