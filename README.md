@@ -1,6 +1,6 @@
 # Retro ASCII Art Waybar
 
-A collection of retro ASCII art themes for Waybar featuring block character aesthetics and system monitoring modules. Includes workspace app icon integration with YAMIS (Yet Another Monochrome Icon Set) icons and uses the Doto font for authentic retro styling.
+A collection of retro ASCII art themes for Waybar, featuring block character aesthetics and system monitoring modules. Comes with workspace app icon integration using YAMIS (Yet Another Monochrome Icon Set) icons, and uses the Doto font for that authentic retro look.
 
 
 ## Themes
@@ -15,6 +15,8 @@ A collection of retro ASCII art themes for Waybar featuring block character aest
 
 ### [ASCII Cava](ascii-cava/)
 ![ASCII Cava Theme](ascii-cava/ascii-cava.png)
+
+> **Note**: This theme requires `waybar-cava` instead of the normal waybar package for audio visualization. Also includes [visualizer.md](ascii-cava/visualizer.md) with various ASCII animation patterns you can use.
 ----
 
 ### [ASCII Grid](ascii-grid/)
