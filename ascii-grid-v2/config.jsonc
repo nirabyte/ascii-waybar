@@ -3,17 +3,18 @@
   "layer": "top",
   "position": "top",
   "spacing": 0,
-  "height": 20,
+  "height": 26,
 
   "modules-left": [
-    "custom/omarchy", // "custom/timer",
+    "custom/omarchy",
+    // "custom/voxtype",
+    // "custom/timer",
     "hyprland/workspaces",
     "custom/update",
-    // "custom/voxtype",
     "custom/screenrecording-indicator",
   ],
 
-  "modules-center": ["custom/analog-clock", "hyprland/window"],
+  "modules-center": ["hyprland/window"],
 
   "modules-right": [
     "tray",
@@ -30,59 +31,35 @@
     "battery",
     "clock",
   ],
-  //   horizontal progress bar
-  // [
-  //   "░░░░░░░░░░",
-  //   "█░░░░░░░░░",
-  //   "██░░░░░░░░",
-  //   "███░░░░░░░",
-  //   "████░░░░░░",
-  //   "█████░░░░░",
-  //   "██████░░░░",
-  //   "███████░░░",
-  //   "████████░░",
-  //   "█████████░",
-  //   "██████████",
-  // ]
-
-  //   Vertical progress bar
-  // [ "░", "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"  ]
-
   "hyprland/workspaces": {
     "disable-scroll": false,
     "all-outputs": true,
     "on-click": "activate",
-    "format": "{name} {windows}",
-    "format-window-separator": " ",
-    "window-rewrite-default": "{}",
-
-    // "format-icons": {
-    //v1
-    // ░ (light)
-    // ▒ (medium)
-    // ▓ (dark)
-    // █ (full)
-    // workspace alternatives
-    // v2  𐬾    //   𐬼""
-    //v3  "■", "□", "▣"
-    //v4   🯰 🯱 🯲 🯳 🯴 🯵 🯶 🯷 🯸 🯹
-    // "default": "▓▓",
-    // "1": "░░",
-    // "2": "░░",
-    // "3": "░░",
-    // "4": "░░",
-    // "5": "░░",
-    // "6": "░░",
-    // "7": "░░",
-    // "8": "░░",
-    // "9": "░░",
-    // "10": "░░",
-    // "active": "██",
-    // },
+    // Uncomment this to have window app icon
+    //    "format": "{icon} {windows}",
+    "format": "{icon} {windows}",
+    "format-icons": {
+      // dark:    ▓▓
+      // light:   ▒▒
+      // lighter: ░░
+      //v3  "■", "□", "▣"
+      "default": "■",
+      "1": "□",
+      "2": "□",
+      "3": "□",
+      "4": "□",
+      "5": "□",
+      "6": "□",
+      "7": "□",
+      "8": "□",
+      "9": "□",
+      "10": "□",
+      "active": "▣",
+    },
     "workspace-taskbar": {
       "enable": true,
       "format": "{icon}",
-      "icon-size": 15,
+      "icon-size": 16,
       "icon-theme": "YAMIS",
     },
     "sort-by-number": true,
@@ -90,53 +67,46 @@
       "*": 5,
     },
   },
-  "hyprland/window": {
-    "format": "{title}",
-    "tooltip": true,
-    "max-length": 45,
 
+  "hyprland/window": {
+    "format": "{title} - {class}",
+    "tooltip": true,
+    "max-length": 50,
     "rewrite": {
       " - ": "",
-      "(.*) - dev\\.zed\\.Zed": "$1",
-      "(.*) - Cursor": "$1",
-      "(.*) - Google Chrome": "$1",
-      "(.*nvim)...(.*)": "$2",
-      "(.*code) - (.*)": "$1",
-      "^.*btop( .*|$)": "BTOP $1",
-      "^.*unimatrix( .*|$)": "MATRIX $1",
-      "(.*) - Spotify": "$1",
-      "(.*) - com.mitchellh.ghostty": "$1",
-      "(.*) - Alacritty": "$1",
-      "(.*Discord)...(.*)": "$2",
-      "(.*) - Vesktop": "$1",
-      "(.*) - org.gnome.Nautilus": "$1",
-      "(.*Steam)...(.*)": "$1",
-      "(.*imv)...(.*).. (.*)": "$2",
-      "(.*) - com.obsproject.Studio": "$1",
-      "(.*) - mpv": "$1",
+      "(.*) - dev\\.zed\\.Zed": "󰨞 $1",
+      "(.*) - TUI\\.float": "  $1",
+      "(.*) - Cursor": "󰨞 $1",
+      "(.*) - Google-Chrome": " $1",
+      "(.*nvim)...(.*)": " $2",
+      "(.*code) - (.*)": "󰨞 $1",
+      "^.*btop( .*|$)": "󰧨 BTOP$1",
+      "(.*) - Spotify": " $1",
+      "(.*) - com.mitchellh.ghostty": "  $1",
+      "(.*) - Alacritty": "  $1",
+      "(.*Discord)...(.*)": "  $2",
+      "(.*) - Vesktop": "  $1",
+      "(.*) - org.pulseaudio.pavucontrol": "󱡫 $1",
+      "(.*) - org.gnome.Nautilus": "󱂵 $1",
+      "(.*Steam)...(.*)": "  $1",
+      "(.*imv)...(.*).. (.*)": "  $2",
+      "(.*) - com.obsproject.Studio": " $1",
+      "(.*) - mpv": "  $1",
+      "(.*) - VLC": "󰕼 $1",
+      "(.*) - Steam": " $1",
+      "(.*) - GIMP": " $1",
+      "(.*) - VS Code": "󰨞 $1",
+      "(.*) - OBS Studio": " $1",
     },
   },
-
-  // "custom/timer": {
-  //   "format": "{}",
-  //   "exec": "~/.config/waybar/scripts/timer.sh",
-  //   "return-type": "json",
-  //   "on-click": "~/.config/waybar/scripts/timer.sh click",
-  //   "on-click-right": "~/.config/waybar/scripts/timer.sh right",
-  //   "on-click-middle": "~/.config/waybar/scripts/timer.sh middle",
-  //   "on-scroll-up": "~/.config/waybar/scripts/timer.sh down",
-  //   "on-scroll-down": "~/.config/waybar/scripts/timer.sh up",
-  //   "tooltip": true,
-  // },
-
   "custom/omarchy": {
-    "format": " ",
+    "format": "■ ",
     "on-click": "omarchy-menu-tofi",
     "on-click-right": "sh -c 'wlogout'",
     "tooltip-format": "Menu\n\nSuper + Alt + Space",
   },
   "custom/update": {
-    "format": "",
+    "format": " ",
     "exec": "omarchy-update-available",
     "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
     "tooltip-format": "Omarchy update available",
@@ -233,6 +203,122 @@
   // "<span font='CaskaydiaMono Nerd Font'>██████████</span>",
   //   ],
   //   "on-click": "omarchy-launch-or-focus-tui btop",
+  // },
+
+  // "mpris": {
+  //   "interval": 0,
+  //   "format": "{player_icon} {dynamic}",
+  //   "format-paused": "{status_icon}<i> {artist} - {title}</i>",
+  //   "on-click-middle": "playerctl previous",
+  //   "on-click": "playerctl  play-pause",
+  //   "on-click-right": "playerctl next",
+  //   "scroll-step": 5.0,
+  //   "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+  //   "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+  //   "smooth-scrolling-threshold": 1,
+  //   "tooltip": true,
+  //   "tooltip-format": "{status_icon} {dynamic}",
+  //   "player-icons": {
+  //     // "chromium": " ",
+  //     "chromium": " ",
+  //     "default": " ",
+  //     "firefox": " ",
+  //     "mopidy": "",
+  //     "mpv": " ",
+  //     "spotify": "",
+  //     "vlc": "󰕼",
+  //   },
+  //   "status-icons": {
+  //     "paused": "",
+  //     "playing": "",
+  //     "stopped": "",
+  //   },
+  //   "dynamic-order": ["artist", "title"],
+  //   "ignored-players": ["firefox", "zen"],
+  //   "max-length": 50,
+  // },
+  // "custom/separator#blank": {
+  //   "format": " ",
+  //   "interval": "once",
+  //   "tooltip": false,
+  // },
+
+  // "cava": {
+  //   "framerate": 30,
+  //   "autosens": 1,
+  //   "bars": 12,
+  //   "method": "pulse",
+  //   "source": "auto",
+  //   "stereo": true,
+  //   "bar_delimiter": 0,
+  //   "lower_cutoff_freq": 50,
+  //   "higher_cutoff_freq": 10000,
+  //   "format": "{} - {title}",
+  //   "tooltip-format": "{artist} - {album}",
+  //   "format-icons": ["_", "-", "_", "-"],
+  //   "actions": {
+  //     "on-click-right": "mode",
+  //   },
+  // },
+
+  "mpris": {
+    "interval": 0,
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "{status_icon}<i> {artist} - {title}</i>",
+    "on-click-middle": "playerctl previous",
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "scroll-step": 5.0,
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "smooth-scrolling-threshold": 1,
+    "tooltip": true,
+    "tooltip-format": "{status_icon} {dynamic}",
+    "player-icons": {
+      "chromium": "󰎇",
+      "discord": " ",
+      "default": "󰎇",
+      "mopidy": "",
+      "mpv": " ",
+      "spotify": "",
+      "vlc": "󰕼",
+    },
+    "status-icons": {
+      "paused": "",
+      "playing": "",
+      "stopped": "",
+    },
+
+    "dynamic-order": ["artist", "title"],
+    "ignored-players": ["firefox", "zen"],
+    "max-length": 50,
+  },
+  // "cava#left": {
+  //   "framerate": 30,
+  //   "autosens": 1,
+  //   "lower_cutoff_freq": 50,
+  //   "higher_cutoff_freq": 10000,
+  //   "bars": 6,
+  //   "method": "pulse",
+  //   "source": "auto",
+  //   "stereo": true,
+  //   "bar_delimiter": 0,
+  //   "format-icons": ["░", "▒", "▓", "█", "▓", "▒", "░"],
+  //   "reverse": false,
+  // },
+
+  // "cava#right": {
+  //   "framerate": 30,
+  //   "autosens": 1,
+  //   "lower_cutoff_freq": 50,
+  //   "higher_cutoff_freq": 10000,
+  //   "bars": 6,
+  //   "method": "pulse",
+  //   "source": "auto",
+  //   "stereo": true,
+  //   "bar_delimiter": 0,
+  //   "format-icons": ["░", "▒", "▓", "█", "▓", "▒", "░"],
+  //   "reverse": true,
   // },
 
   // "bluetooth": {
@@ -426,13 +512,6 @@
       "critical": 10,
     },
   },
-
-  // "custom/analog-clock": {
-  //   "format": {},
-  //   "exec": "~/.config/waybar/scripts/analog-clock.sh",
-  //   "interval": 1,
-  //   "return-type": "json",
-  // },
 
   "clock": {
     "format": "{:%I:%M %p}",
