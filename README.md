@@ -1,6 +1,6 @@
 # ASCII Waybar modules
 
-Collections ASCII art modules for Waybar, featuring block character and system monitoring modules. 
+Collection ASCII themed Waybar, featuring block character and system monitoring modules. 
 
 ## Themes
 
@@ -39,10 +39,6 @@ Collections ASCII art modules for Waybar, featuring block character and system m
 ### [ASCII Vertical](ascii-vert/)
 
 ## ![ASCII Vertical Theme](ascii-vert/ascii-vert.png)
-
-### [Extra](extra/)
-
-## ![Extra Theme](extra/extra.png)
 
 ## Quick Start
 
