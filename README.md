@@ -1,6 +1,6 @@
 # ASCII Waybar modules
 
-Collection ASCII themed Waybar, featuring block character and system monitoring modules. 
+few ideas I had for waybar
 
 ## Themes
 
